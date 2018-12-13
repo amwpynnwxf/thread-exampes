@@ -1,7 +1,7 @@
 package com.samples.design.singleton;
 
 /**
- * 单例末：double-check，解决了线程安全，性能也好
+ * 单例模式：double-check，解决了线程安全，性能也好
  * @author wuyouwulv
  *
  */

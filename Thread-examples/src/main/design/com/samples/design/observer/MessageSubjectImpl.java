@@ -3,8 +3,13 @@ package com.samples.design.observer;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * 具体发布
+ * @author wuyouwulv
+ *
+ */
 public class MessageSubjectImpl implements MessageSubject {
-	private List<MessageObserver> observerList;
+	private List<MessageObserver> observerList;	//订阅者列表
 	
 	@Override
 	public void register(MessageObserver observer) {

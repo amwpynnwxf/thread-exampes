@@ -1,5 +1,10 @@
 package com.samples.design.observer;
 
+/**
+ * ¾ßÌå¶©ÔÄ
+ * @author wuyouwulv
+ *
+ */
 public class MessageObserverImpl implements MessageObserver {
 	private String name;
 	

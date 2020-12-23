@@ -3,6 +3,11 @@ package com.thread.samples.lock.reentrantLock;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
+/**
+ * 可重入锁的可中断响应功能
+ * @author wuyouwulv
+ *
+ */
 public class LockInterruptiblyTest {
 	Lock lock = new ReentrantLock();
 	public static void main(String[] args){
@@ -18,11 +23,11 @@ public class LockInterruptiblyTest {
 			e.printStackTrace();
 		}
 		
-		thread2.interrupt();
+		thread2.interrupt();// 中断线程
 	}
 	
 	public void insert(Thread thread) throws InterruptedException{
-		lock.lockInterruptibly();
+		lock.lockInterruptibly();// 获取锁，同时可中断响应，这里如果用lock(),或者tryLock()方法，外部的interrupt都无法中断
 		try{
 			System.out.println(thread.getName() + "获得了锁");
 			Thread.sleep(4000);

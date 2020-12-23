@@ -3,10 +3,13 @@ package com.samples.jdk8.funApply;
 import java.util.function.BiFunction;
 import java.util.function.Function;
 
+/**
+ * 方法引用
+ */
 public class FunApplyTest {
 	private String name;
 	private int age;
-	
+
 	public FunApplyTest(String name, int age){
 		this.name = name;
 		this.age = age;
@@ -38,7 +41,7 @@ public class FunApplyTest {
 	    String result = func.apply(parameter);
 	    System.out.println(result);
 	}
-	
+
 	@Override
 	public String toString(){
 		return "name: " + name + "; age: " + age;
